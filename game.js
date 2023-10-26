@@ -4,6 +4,8 @@ const pacmanFrames = document.getElementById("animation");
 const ghostFrames = document.getElementById("ghosts");
 const music = document.getElementById("music");
 
+music.play();
+
 let createRect = (x, y, width, height, color) => {
     canvasContext.fillStyle = color;
     canvasContext.fillRect(x, y, width, height);
@@ -31,8 +33,6 @@ let ghosts = [];
 let wallSpaceWidth = oneBlockSize / 1.6;
 let wallOffset = (oneBlockSize - wallSpaceWidth) / 2;
 let wallInnerColor = "black";
-
-music.play();
 
 // we now create the map of the walls,
 // if 1 wall, if 0 not wall

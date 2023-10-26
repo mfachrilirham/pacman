@@ -4,7 +4,6 @@ const pacmanFrames = document.getElementById("animation");
 const ghostFrames = document.getElementById("ghosts");
 const music = document.getElementById("music");
 
-music.play();
 
 let createRect = (x, y, width, height, color) => {
     canvasContext.fillStyle = color;
@@ -90,6 +89,7 @@ let createNewPacman = () => {
 };
 
 let gameLoop = () => {
+    music.play();
     update();
     draw();
 };
